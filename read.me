@@ -4,4 +4,10 @@ Primeira coisa que tive que ajustar que não necessariamente era um erro mas o b
 depois eu tive que colocar a senha root no password, após isso arrumei uma ; que estava dando um erro no servidor APACHE, depois ele já aparaceu a tela eu já 
 conseguia cadastrar e excluir usuários mas não tinha a função de editar, então primeiro eu criei a tabela e o nome da coluna, fiz um link pela cédula,  que envia 
 para outro arquivo que criei que foi editar.php e para realizar isso também fiz o conexao.php, pq faltava o link no código levei todo o sistema para lá e formulei o 
-código de edição 
+código de edição
+
+
+Primeiro foi necessário criar o banco de dados Sistema_loja_erros_2 e colocar a senha root na conexão. Depois corrigi o bind_param do cadastro, 
+porque o preço estava sendo tratado como inteiro, mesmo sendo um valor decimal.
+Também havia um erro na função de atualizar, pois o código enviava o estoque no bind_param, mas ele não estava presente no comando UPDATE.
+Por fim, faltava uma forma de editar os produtos pela tabela, então foi necessário adicionar essa opção para completar o CRUD.
